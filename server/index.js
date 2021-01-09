@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 const rulesURL = 'https://api.twitter.com/2/tweets/search/stream/rules';
 const streamURL = 'https://api.twitter.com/2/tweets/search/stream?tweet.fields=public_metrics&expansions=author_id';
 
-const rules = [{ value: 'coding' }];
+const rules = [{ value: 'trading' }, {value: 'long'}];
 
 // Get stream rules
 const getRules = async () => {
@@ -30,7 +30,7 @@ const getRules = async () => {
         }
     });
 
-    console.log(response.body);
+    // console.log(response.body);
     return response.body;
 };
 
@@ -52,7 +52,6 @@ const setRules = async () => {
 
 // Delete stream rules
 const deleteRules = async (rules) => {
-    console.log("deleteRules function call")
     if (!Array.isArray(rules.data)) {
         return null;
     }
