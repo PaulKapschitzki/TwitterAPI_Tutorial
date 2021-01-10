@@ -1,5 +1,5 @@
 {
-  "name": "tweetstocks",
+  "name": "TweetStream_Tut",
   "version": "1.0.0",
   "description": "",
   "main": "server/index.js",
